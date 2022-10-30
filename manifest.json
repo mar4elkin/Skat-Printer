@@ -1,0 +1,19 @@
+{
+    "name": "SKAT Printer",
+    "version": "1.0.0",
+    "description": "Printer option for SKAT",
+    "manifest_version": 3,
+    "author": "Mark Tamarov",
+    "action": {
+        "default_title": "Click Me",   
+        "default_popup": "popup.html"  
+    },
+    "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab",
+        "printerProvider"
+    ],
+    "host_permissions": ["<all_urls>"]
+
+}
