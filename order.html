@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"> 
+    <style type="text/css">
+      h1, h2, h3, h4, h5, p, pre, span {
+        font-family: 'Roboto', sans-serif;
+      }
+      .img_center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+      }
+      #root {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      #root p {
+        font-weight: 300;
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+      .footer {
+        font-weight: 300;
+        text-align: center;
+      }
+      @page {
+        margin: 0;
+      }
+      @media print {
+        html, body {
+          width: 72.1mm;
+          height: 210mm;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <img class="img_center" src="https://taxipulkovo.com/assets/images/logo.png" />
+      <p><b id="orderNumber"></b></p>
+      <p>Откуда: <b id="addressFrom"></b></p>
+      <p>Куда: <b id="addressTo"></b></p>
+      <p>Класс: <b id="carClass"></b></p>
+      <p>Способ оплаты: <b id="paymentMethod"></b></p>
+      <p>Доп. услуги: <b id="options"></b></p>
+      <p>Стоимость: <b id="price"></b></p>
+      <p>№ а/м такси: <b id="car"></b></p>
+      <p class="footer">Данный бланк заказа не является платежным документом</p>
+      <p class="footer">ООО "Управляющая компания<br/>Такси Пулково""</p>
+      <p class="footer">8(812)677-86-35</p>
+      <p class="footer">info@taxipulkovo.com</p>
+      <p class="footer">Сохраняйте бланк заказа до конца поездки!</p>
+    </div>
+
+    <script type="text/javascript" src="./scripts/order.js"></script>
+  </body>
+</html>
