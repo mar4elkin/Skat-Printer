@@ -112,6 +112,7 @@ function generatePrintImage(modalData) {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 5px;
           }
           #root {
             display: flex;
@@ -120,23 +121,22 @@ function generatePrintImage(modalData) {
             margin-left: 20px;
             margin-right: 20px;
           }
-          #root h3 {
+          #root p {
             font-weight: 300;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            margin-top: 4px;
+            margin-bottom: 4px;
           }
           .footer {
             font-weight: 300;
             text-align: center;
           }
           @page {
-            size: A4;
             margin: 0;
           }
           @media print {
             html, body {
-              width: 210mm;
-              height: 297mm;
+              width: 72.1mm;
+              height: 210mm;
             }
           }
         </style>
@@ -144,19 +144,19 @@ function generatePrintImage(modalData) {
       <body onload="window.print()" onafterprint="window.close()">
         <div id="root">
           <img class="img_center" src="https://taxipulkovo.com/assets/images/logo.png" />
-          <h3>Бланк заказа: <b>${modalData.orderNumber}</b></h3>
-          <h3>Откуда: <b>${modalData.addressFrom}</b></h3>
-          <h3>Куда: <b>${modalData.addressTo}</b></h3>
-          <h3>Класс: <b>${modalData.carClass}</b></h3>
-          <h3>Способ оплаты: <b>${modalData.paymentMethod}</b></h3>
-          <h3>Доп. услуги: <b>${modalData.options}</b></h3>
-          <h3>Стоимость: <b>${modalData.price}</b></h3>
-          <h3>№ а/м такси: <b>${modalData.car}</b></h3>
-          <h3 class="footer">Данный бланк заказа не является платежным документом</h3>
-          <h3 class="footer">ООО "Управляющая компания<br/>Такси Пулково""</h3>
-          <h3 class="footer">8(812)677-86-35</h3>
-          <h3 class="footer">info@taxipulkovo.com</h3>
-          <h3 class="footer">Сохраняйте бланк заказа до конца поездки!</h3>
+          <p><b>${modalData.orderNumber}</b></p>
+          <p>Откуда: <b>${modalData.addressFrom}</b></p>
+          <p>Куда: <b>${modalData.addressTo}</b></p>
+          <p>Класс: <b>${modalData.carClass}</b></p>
+          <p>Способ оплаты: <b>${modalData.paymentMethod}</b></p>
+          <p>Доп. услуги: <b>${modalData.options}</b></p>
+          <p>Стоимость: <b>${modalData.price}</b></p>
+          <p>№ а/м такси: <b>${modalData.car}</b></p>
+          <p class="footer">Данный бланк заказа не является платежным документом</p>
+          <p class="footer">ООО "Управляющая компания<br/>Такси Пулково""</p>
+          <p class="footer">8(812)677-86-35</p>
+          <p class="footer">info@taxipulkovo.com</p>
+          <p class="footer">Сохраняйте бланк заказа до конца поездки!</p>
         </div>
       </body>
     </html>
