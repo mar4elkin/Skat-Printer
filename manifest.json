@@ -1,6 +1,6 @@
 {
     "name": "SKAT Printer",
-    "version": "1.0.0",
+    "version": "0.1.4",
     "description": "Printer option for SKAT",
     "manifest_version": 3,
     "author": "Mark Tamarov",
@@ -10,10 +10,7 @@
     },
     "permissions": [
         "tabs",
-        "scripting",
-        "activeTab",
-        "printerProvider"
+        "scripting"
     ],
     "host_permissions": ["<all_urls>"]
-
 }
