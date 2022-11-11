@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('options').innerHTML = params.options
   document.getElementById('price').innerHTML = params.price
   document.getElementById('car').innerHTML = params.car
-  window.addEventListener('beforeprint', (e) => {
-    let rootClone = document.getElementById('root').cloneNode(true);
-    document.querySelector('body').appendChild(rootClone);
-  });
   window.addEventListener('afterprint', (e) => {
     window.close()
   });
