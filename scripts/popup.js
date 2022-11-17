@@ -143,6 +143,9 @@ function ParseModalData() {
     function getPrice() {
       try {
         let price = `${parseInt(modalContent.querySelector('[placeholder="Стоимость"]').value)} рублей`;
+        // if (price != NaN) {
+        //   return {name: 'price', status: 'err', response: 'Цена не может быть пустая!'};
+        // }
         return {name: 'price', status: 'success', response: price};
       } catch (e) {
         return {name: 'price', status: 'err', response: 'Цена не может быть пустая!'};
@@ -152,8 +155,8 @@ function ParseModalData() {
     //машина
     function getCar() {
       try {
-        let car = modalContent.getElementsByClassName('info')[0].childNodes[1].getElementsByTagName('span')[1].title;
-        return {name: 'car', status: 'success', response: car};
+        let car = modalContent.getElementsByClassName('info')[0].childNodes[1].getElementsByTagName('span')[1].title.match(/[\wа-яА-Я]+/ig);
+        return {name: 'car', status: 'success', response: [car[1], car[2], car[3], car[car.length -1]].join(' ')};
       } catch (e) {
         return {name: 'car', status: 'err', response: 'Информация о а/м не может быть пустая!'};
       }
@@ -172,13 +175,13 @@ function ParseModalData() {
     //тип оплаты
     function getPaymentMethod() {
       try {
-        let paymentMethod = sortTags(modalContent.getElementsByClassName('tag'), true);
-        if (paymentMethod.length == 0) {
-          return {name: 'paymentMethod', status: 'err', response: 'Добавьте способ оплаты (доп. услуги)'};
+        let paymentMethod = modalContent.querySelector('[placeholder="Контрагент"]').value;
+        if (paymentMethod == 'Аэропорт') {
+          return {name: 'paymentMethod', status: 'success', response: 'Безналичный расчет'};
         }
-        return {name: 'paymentMethod', status: 'success', response: paymentMethod};
+        return {name: 'paymentMethod', status: 'success', response: 'Наличными водителю'};
       } catch (e) {
-        return {name: 'paymentMethod', status: 'err', response: 'Добавьте способ оплаты (доп. услуги)'};
+        return {name: 'paymentMethod', status: 'err', response: 'Тип оплаты не найден (поле контагент)'};
       }
     };
 
