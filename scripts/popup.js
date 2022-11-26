@@ -92,7 +92,7 @@ function ParseModalData() {
       car: '', 
       carClass: '', 
       paymentMethod: '', 
-      options: ''
+      //options: ''
     }
 
     const modalContent = modalSelector[0].getElementsByClassName('modal-content')[0];
@@ -155,7 +155,8 @@ function ParseModalData() {
     //машина
     function getCar() {
       try {
-        let car = modalContent.getElementsByClassName('info')[0].childNodes[1].getElementsByTagName('span')[1].title.match(/[\wа-яА-Я]+/ig);
+        let car = document.querySelector("#footer-region > div > div.modal-layer > div > div > div.body > div > div:nth-child(2) > div.col.col-4.vertical-flex > div:nth-child(1) > div > div > div:nth-child(4) > span.value.dashed")
+          .title.match(/[\wа-яА-Я]+/ig);
         return {name: 'car', status: 'success', response: [car[1], car[2], car[3], car[car.length -1]].join(' ')};
       } catch (e) {
         return {name: 'car', status: 'err', response: 'Информация о а/м не может быть пустая!'};
@@ -204,7 +205,7 @@ function ParseModalData() {
       getCar(),
       getCarClass(),
       getPaymentMethod(),
-      getOptions()
+      //getOptions()
     )
   }
   return {status: 'error', errorDescription: 'Окно с заказом не найдено'}
