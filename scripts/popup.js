@@ -142,7 +142,8 @@ function ParseModalData() {
     //цена
     function getPrice() {
       try {
-        let price = `${parseInt(modalContent.querySelector('[placeholder="Стоимость"]').value)} рублей`;
+        let priceSelector = document.querySelector("#footer-region > div > div.modal-layer > div > div > div.body > div > div:nth-child(2) > div.col.col-4.vertical-flex > div.row.non-flex.no-top-margin.totals > div.col.col-11.total-label.no-padding > span:nth-child(2)")
+        let price = `${parseInt(priceSelector.innerText)} рублей`;
         // if (price != NaN) {
         //   return {name: 'price', status: 'err', response: 'Цена не может быть пустая!'};
         // }
@@ -166,7 +167,7 @@ function ParseModalData() {
     //класс
     function getCarClass() {
       try {
-        let carClass = modalContent.querySelector('[placeholder="Служба"]').value;
+        let carClass = document.querySelector('#footer-region > div > div.modal-layer > div > div > div.body > div > div:nth-child(2) > div.col.col-8 > div.order-form > div:nth-child(1) > div.col.col-5.no-padding > div > div.col.col-8 > div > div.field-data > input').value;
         return {name: 'carClass', status: 'success', response: carClass};
       } catch (e) {
         return {name: 'carClass', status: 'err', response: 'Информация о классе а/м не может быть пустая!'};
