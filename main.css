@@ -1,17 +1,22 @@
 body {
-  background-color: #fff;
+  background-color: #0A2647;
 }
 
-h1, h2, h3, h4, h5, a, span {
-  color: black;
+h1, h2, h3, h4, h5, a, span, p {
+  color: #E5E5E5;
   font-family: 'Roboto', sans-serif;
+}
+
+#bugtracker, #version {
+  text-decoration: none;
+  font-size: 12px;
 }
 
 #root {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 300px;
+  width: 250px;
 }
 
 #root h1{
@@ -21,6 +26,13 @@ h1, h2, h3, h4, h5, a, span {
 #root h2 {
   text-align: center;
   font-weight: 300;
+}
+
+#btnPrint {
+  background-color: #393E46;
+  border: none;
+  border-radius: 5px;
+  color: #E5E5E5;
 }
 
 .btn_and_status, .footer {

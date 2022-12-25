@@ -1,15 +1,15 @@
 {
     "name": "SKAT Printer",
-    "version": "1.2.0",
+    "version": "2.0.0",
     "description": "Printer option for SKAT",
     "manifest_version": 3,
     "author": "Mark Tamarov",
     "action": {
-        "default_title": "Click Me",   
+        "default_title": "Skat Printer",   
         "default_popup": "popup.html"  
     },
     "background": {
-        "service_worker": "scripts/background.js"
+        "service_worker": "build/background.js"
     },
     "permissions": [
         "tabs",

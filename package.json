@@ -1,0 +1,25 @@
+{
+  "name": "skat-printer",
+  "version": "2.0.0",
+  "description": "Это не большое google chrome расширение для удобной и быстрой печати заказов в веб платформе \"СКАТ\"\r Сделано специально для такси-пулково",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mar4elkin/Skat-Printer.git"
+  },
+  "author": "Mark Tamarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mar4elkin/Skat-Printer/issues"
+  },
+  "homepage": "https://github.com/mar4elkin/Skat-Printer#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.206",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.4"
+  }
+}
