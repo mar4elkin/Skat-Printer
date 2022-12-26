@@ -1,6 +1,6 @@
 {
     "name": "SKAT Printer",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Printer option for SKAT",
     "manifest_version": 3,
     "author": "Mark Tamarov",

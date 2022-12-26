@@ -191,7 +191,7 @@ function parser() {
     order.paymentMethod = "Наличными водителю"
 
     // @ts-ignore
-    if (paymentMethodElement.value.search("Аэропорт")) {
+    if (paymentMethodElement.value.search("Аэропорт") !== -1) {
       order.paymentMethod = "Безналичный расчет"
     }
 
